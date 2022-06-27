@@ -2,20 +2,30 @@
   <h4>REGISTRO</h4>
   <form action="">
     <div>
+      <label for="">Codigo: </label>
+      <input type="text" name="codigo" [(ngModel)]="codigo" />
+    </div>
+    <br />
+    <div>
       <label for="">Nombre: </label>
       <input type="text" name="nombre" [(ngModel)]="nombre" />
     </div>
     <br />
     <div>
-      <label for="">Apellido: </label>
-      <input type="text" name="apellido" [(ngModel)]="apellido" />
+      <label for="">Seccion: </label>
+      <input type="text" name="seccion" [(ngModel)]="seccion" />
+    </div>
+    <br />
+    <div>
+      <label for="">Precio: </label>
+      <input type="number" name="precio" [(ngModel)]="precio" />
     </div>
     <br />
     <button type="submit" (click)="registrarUsuario()">Guardar</button>
   </form>
 </div>
-<div>
-  <h5>DATOS REGISTRADOS</h5>
-  <p>{{ nombre }}</p>
-  <p>{{ apellido }}</p>
+<br />
+<div *ngFor="let articulo of arrayArticulos; let i = index">
+  {{ i + 1 }} - {{ articulo.codigo }} {{ articulo.nombre }}
+  {{ articulo.seccion }} {{ articulo.precio }}
 </div>

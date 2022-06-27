@@ -9,9 +9,10 @@ import { articulo } from './articulos.component';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
 
-  nombre: string = '';
-  apellido: string = '';
   codigo: string = '';
+  nombre: string = '';
+  seccion: string = '';
+  precio: number = 0;
 
   //array de articulos (objetos)
   arrayArticulos: articulo[] = [
@@ -23,8 +24,14 @@ export class AppComponent {
   constructor() {}
 
   registrarUsuario() {
-    console.log(
-      'El nombre es: ' + this.nombre + ' y el apellido: ' + this.apellido
+    //con esto cogemos un empleado introducido por el formulario
+    let ObjArticulo = new articulo(
+      this.codigo,
+      this.nombre,
+      this.seccion,
+      this.precio
     );
+    //Introducimos dicho empleado en el array
+    this.arrayArticulos.push(ObjArticulo);
   }
 }
