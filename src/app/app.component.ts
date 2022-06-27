@@ -24,7 +24,7 @@ export class AppComponent {
   constructor() {}
 
   registrarUsuario() {
-    //con esto cogemos un empleado introducido por el formulario
+    //agregamos objetos a la estructura pero no son definitivos
     let ObjArticulo = new articulo(
       this.codigo,
       this.nombre,
