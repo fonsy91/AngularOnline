@@ -29,3 +29,14 @@
   {{ i + 1 }} - {{ articulo.codigo }} {{ articulo.nombre }}
   {{ articulo.seccion }} {{ articulo.precio }}
 </div>
+<div>
+  <h4>COMUNICACION ENTRE COMPONENTES</h4>
+  <p>
+    Hay muchas formas de comunicarse entre componentes veremos todas las maneras
+    la primera es la comunicacion desde el componente padre al hijo mediante
+    input. Consiste en usar la etiqueta @Input de Angular. Ésta etiqueta se pone
+    en el componente hijo para indicar que esa variable proviene desde fuera del
+    componente, es decir desde el componente padre.
+  </p>
+  <app-hijo [mensajeHijo]="mensajePadre"></app-hijo>
+</div>

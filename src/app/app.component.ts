@@ -14,6 +14,8 @@ export class AppComponent {
   seccion: string = '';
   precio: number = 0;
 
+  mensajePadre = 'Hola hijo';
+
   //array de articulos (objetos)
   arrayArticulos: articulo[] = [
     new articulo('a01', 'Mesa', 'Interiores', 45),
